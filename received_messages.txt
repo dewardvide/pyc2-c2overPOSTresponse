@@ -1,25 +1,7 @@
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
-ALIVE, Command Response: No command ran
 ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
-ALIVE, Command Response: No command Ran
+ALIVE, Command Response: dewardvide_x64\dewar
+
+ALIVE, Command Response: dewardvide_x64\dewar
+
+ALIVE, Command Response: dewardvide_x64\dewar
+
