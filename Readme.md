@@ -8,7 +8,7 @@ It works as follows:
 - Run agent.py to send a POST request
 - The server sesponds to the request with a powershell command that is ran by agent.py
 - agent.py sends another POST request after the specified time with the command response
-* I am working on a mechanism to allow the attacker to send a different response but for now it's a loop
+- I am working on a mechanism to allow the attacker to send a different response but for now it's a loop
 
 ## Installation
 
