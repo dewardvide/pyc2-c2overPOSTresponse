@@ -33,9 +33,10 @@ def run_powershell_command(command):
         print(output)
     except subprocess.CalledProcessError as e:
         print(f"Error executing PowerShell command: {e}")
+        output = f"Error executing PowerShell command: {e}"
     except Exception as ex:
         print(f"An error occurred: {ex}")
-
+        output = f"An error occurred: {ex}"
     return output
 
 if __name__ == "__main__":
