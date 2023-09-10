@@ -15,6 +15,7 @@ Download the .py files and run them.
 
 ## Usage
 
+### Configure Agent.py
 
 Agent.py needs to be installed and ran on the victim machine. Provide the C2 url as shown below.
 
@@ -38,9 +39,25 @@ output = 'No command Ran'
 
 Each HTTP POST request will require you to enter a desired command from the server side that will be sent in the HTTP response message body
 
+### Configure Server.py
+
+Configure the host and port you wish to run the C2 server on 
+
+```
+host = "localhost"
+port = 8080
+```
+Specify where you want to save the command output logs
+
+```
+        # Append the message body to a text file
+        with open('received_messages.txt', 'a') as file:
+            file.write(message_body + '\n')
+```
+
 ## Summarized UML Sequence Diagram 
 
-<img width="452" alt="image" src="https://github.com/dewardvide/pyc2-c2overPOSTresponse/assets/91884298/cb05e72e-d5bd-4f2e-8064-6c5590e14354">
+<img width="465" alt="image" src="https://github.com/dewardvide/pyc2-c2overPOSTresponse/assets/91884298/49684dcd-459e-43d5-b8c4-fb3efcad69f6">
 
 ## Contributing
 
