@@ -19,9 +19,8 @@ Download the .py files and run them.
 Agent.py needs to be installed and ran on the victim machine. Provide the C2 url as shown below.
 
 ```
-    url = "http://localhost:8080"  # Replace your C2 URL 
-    # This string will be sent to C2 to verify it's alive and return output of a command ran
-    message_body = "ALIVE, Command Response: {}".format(output)
+    url = "http://localhost:8080"  # Replace your C2 URL
+
 ```
 
 The http requests are sent in time intervals. You can set this in Agent.py as well. 
