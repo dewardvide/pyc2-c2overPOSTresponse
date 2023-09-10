@@ -48,6 +48,10 @@ if command_to_run:
         count =+ 1
 ```
 
+## Improvement Plan
+
+1. Create a mechanism that lets the attacker enter commands before the next request 
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
