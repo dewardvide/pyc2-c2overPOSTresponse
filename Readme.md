@@ -50,7 +50,7 @@ if command_to_run:
 
 ## Improvement Plan
 
-1. Create a mechanism that lets the attacker enter commands before the next request 
+1. Create a mechanism that lets the attacker enter commands before the next POST request is recieved
 
 ## Contributing
 
