@@ -57,7 +57,7 @@ Specify where you want to save the command output logs
 
 ## Summarized UML Sequence Diagram 
 
-<img width="465" alt="image" src="https://github.com/dewardvide/pyc2-c2overPOSTresponse/assets/91884298/49684dcd-459e-43d5-b8c4-fb3efcad69f6">
+<img width="465" alt="image" src="https://github.com/dewardvide/pyc2-c2overPOSTresponse/assets/91884298/ff5801a8-8a8f-4f92-af0e-44bffb69c7f5">
 
 ## Contributing
 
