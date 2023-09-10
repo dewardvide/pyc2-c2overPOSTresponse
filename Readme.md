@@ -1,7 +1,6 @@
 # pyc2-c2overPOSTresponse
 
 This project is still under development. This is a simple C2 server that allows you to run Powershell commands. 
-I am still a n33b at this but I believe that I will get better through help and suggestions from the community : ) 
 
 It works as follows: 
 - Run server.py to start a http server
