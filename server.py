@@ -12,16 +12,24 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         #THIS IS HERE FOR TESTING PURPOSES
         # Define the response string which is the command you would like to run perhaps we should change this to input
-        response = "Hello World!"
+        file_path = "path/to/your/file.txt"
 
-        # Set the response headers
-        self.send_response(200)
-        self.send_header("Content-type", "text/plain")
-        self.send_header("Content-Length", len(response))
-        self.end_headers()
+        try:
+            # Open and read the file
+            with open(file_path, "rb") as file:
+                file_content = file.read()
 
-        # Send the response
-        self.wfile.write(response.encode("utf-8"))
+            # Set the response headers
+            self.send_response(200)
+            self.send_header("Content-type", "application/octet-stream")
+            self.send_header("Content-Length", len(file_content))
+            self.end_headers()
+
+            # Send the file content as the response
+            self.wfile.write(file_content)
+        except FileNotFoundError:
+            # If the file is not found, return a 404 error
+            self.send_error(404, "File not found")
 
     def do_POST(self):
 
