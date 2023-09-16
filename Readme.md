@@ -62,8 +62,8 @@ Specify the directory of the file you would like to upload using HTTP GET
 
 ```
        def do_GET(self):
-        # Define the path of the file you would like to upload to the victim machine
-        file_path = "path/to/your/file.txt"
+        # Define the directory where your files are located
+        file_directory = "File Path"
 ```
 
 ## Summarized UML Sequence Diagram 
