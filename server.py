@@ -9,7 +9,7 @@ host = "localhost"
 port = 8080
 
 # Define the directory where your files are located
-file_directory = "Files"
+file_directory = "Files Path"
 
 # Define a custom request handler to handle incoming requests
 class MyHandler(http.server.SimpleHTTPRequestHandler):
@@ -23,7 +23,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
 
         try:
             # Open and read the file
-            with open(file_path, "rb") as file:
+            with open(full_path, "rb") as file:
                 file_content = file.read()
 
             # Set the response headers
