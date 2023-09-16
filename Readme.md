@@ -14,6 +14,7 @@ The framework also alows the attacker to upload a file to the victim by sending 
 ## Installation
 
 Download the .py files and run them. 
+Agent.py goes to the victim and Server.py is for you : ) 
 
 ## Usage
 
