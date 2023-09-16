@@ -9,6 +9,8 @@ It works as follows:
 - agent.py sends another POST request after the specified time with the command response
 - I am working on a mechanism to allow the attacker to send a different response but for now it's a loop
 
+The framework also alows the attacker to upload a file to the victim by sending a powershell command that would send a HTTP get request to the server. 
+
 ## Installation
 
 Download the .py files and run them. 
@@ -53,6 +55,14 @@ Specify where you want to save the command output logs
         # Append the message body to a text file
         with open('received_messages.txt', 'a') as file:
             file.write(message_body + '\n')
+```
+
+Specify the directory of the file you would like to upload using HTTP GET
+
+```
+       def do_GET(self):
+        # Define the path of the file you would like to upload to the victim machine
+        file_path = "path/to/your/file.txt"
 ```
 
 ## Summarized UML Sequence Diagram 
