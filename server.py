@@ -1,17 +1,25 @@
 import http.server
 import socketserver
-#import urllib.parse
+import os 
+import urllib.parse
 
 
 # Define the server's listening address and port
 host = "localhost"
 port = 8080
 
+# Define the directory where your files are located
+file_directory = "Files"
+
 # Define a custom request handler to handle incoming requests
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        # Define the path of the file you would like to upload to the victim machine
-        file_path = "path/to/your/file.txt"
+       # Extract the path from the URL
+        url_parts = urllib.parse.urlparse(self.path)
+        file_path = urllib.parse.unquote(url_parts.path)
+
+        # Combine the requested file path with the file directory
+        full_path = os.path.join(file_directory, file_path.strip("/"))
 
         try:
             # Open and read the file
