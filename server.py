@@ -10,8 +10,7 @@ port = 8080
 # Define a custom request handler to handle incoming requests
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        #THIS IS HERE FOR TESTING PURPOSES
-        # Define the response string which is the command you would like to run perhaps we should change this to input
+        # Define the path of the file you would like to upload to the victim machine
         file_path = "path/to/your/file.txt"
 
         try:
